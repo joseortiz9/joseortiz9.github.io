@@ -1,18 +1,22 @@
-import './App.css';
+import React, {Suspense} from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.scss";
+import {GlobalStyles} from "./styles/GlobalStyles";
+import {Header, Footer, Portfolio, LandingBanner, AboutMe} from "./components";
+import ScrollToTop from "./common/scroll-to-top";
 
 function App() {
-  return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <h1>Jose David Ortiz Correa</h1>
-        <h3>Full-stack developer</h3>
-        <h4>Colombian ITMO student</h4>
-        <div>
-          <a href="https://github.com/joseortiz9">Repositories</a>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <Suspense fallback={"Loading"}>
+            <GlobalStyles />
+            <ScrollToTop />
+            <Header />
+            <LandingBanner />
+            <Portfolio />
+            <AboutMe />
+            <Footer />
+        </Suspense>
+);
 }
 
 export default App;
