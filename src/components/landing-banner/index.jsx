@@ -1,9 +1,14 @@
 import React, {useEffect, useRef, useState} from "react";
 import * as THREE from "vanta/vendor/three.r119.min";
-import Dots from  "vanta/src/vanta.waves";
+import Dots from  "vanta/dist/vanta.waves.min";
 import {BannerWrapper} from "./styles";
 import vars from "../../styles/variables.module.scss";
 import {Container} from "react-bootstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import ScrollLink from "../../common/scroll-link";
+import CVPdf from "../../assets/CV-JoseOrtiz.pdf";
+import SocialMedia from "../../common/social-media";
 
 const LandingBanner = () => {
     const [vantaEffect, setVantaEffect] = useState()
@@ -23,15 +28,17 @@ const LandingBanner = () => {
     }, [vantaEffect]);
 
     return(
-        <BannerWrapper ref={vantaRef} className="d-flex align-items-center">
+        <BannerWrapper ref={vantaRef} id="landing-banner" className="d-flex align-items-center">
             <Container>
                 <h1 className="banner-title">Jose Ortiz</h1>
                 <h1 className="banner-title-outline">Full-stack developer</h1>
-                {/*<h4>Colombian ITMO student</h4>*/}
-                <div>
-                    <a href="https://github.com/joseortiz9">Repositories</a>
+                <div className="d-flex mt-3">
+                    <ScrollLink classes="btn btn-solid mr-3" sectionID="portfolio">Portfolio</ScrollLink>
+                    <a className="btn btn-solid mr-3" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon icon={faGithub}/> Github</a>
+                    <a className="btn btn-solid" href={CVPdf} target="_blank" rel="noreferrer">CV</a>
                 </div>
             </Container>
+            <SocialMedia />
         </BannerWrapper>
     );
 };

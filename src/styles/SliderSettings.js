@@ -2,32 +2,40 @@ export const PortfolioSliderProps = {
     infinite: true,
     speed: 300,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     arrows: false,
     dots: true,
     responsive: [
         {
             breakpoint: 1200,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
+                slidesToShow: 3
             }
         },
         {
             breakpoint: 991,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToShow: 2
             }
         },
         {
             breakpoint: 586,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToShow: 1
             }
         }
     ]
+}
+
+export const SkillsSliderProps = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 8,
+    swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: false,
 }
