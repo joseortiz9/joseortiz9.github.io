@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.afd7172b.chunk.css",
-    "main.js": "/static/js/main.383fbce6.chunk.js",
-    "main.js.map": "/static/js/main.383fbce6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.204ae675.js",
-    "runtime-main.js.map": "/static/js/runtime-main.204ae675.js.map",
-    "static/js/2.e38e41ca.chunk.js": "/static/js/2.e38e41ca.chunk.js",
-    "static/js/2.e38e41ca.chunk.js.map": "/static/js/2.e38e41ca.chunk.js.map",
-    "static/js/3.ce518109.chunk.js": "/static/js/3.ce518109.chunk.js",
-    "static/js/3.ce518109.chunk.js.map": "/static/js/3.ce518109.chunk.js.map",
+    "main.css": "/static/css/main.1c74182e.chunk.css",
+    "main.js": "/static/js/main.aa90e42f.chunk.js",
+    "main.js.map": "/static/js/main.aa90e42f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6e7a4551.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6e7a4551.js.map",
+    "static/css/2.74fc6e00.chunk.css": "/static/css/2.74fc6e00.chunk.css",
+    "static/js/2.5f796643.chunk.js": "/static/js/2.5f796643.chunk.js",
+    "static/js/2.5f796643.chunk.js.map": "/static/js/2.5f796643.chunk.js.map",
+    "static/js/3.f30cec2c.chunk.js": "/static/js/3.f30cec2c.chunk.js",
+    "static/js/3.f30cec2c.chunk.js.map": "/static/js/3.f30cec2c.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.afd7172b.chunk.css.map": "/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.e38e41ca.chunk.js.LICENSE.txt": "/static/js/2.e38e41ca.chunk.js.LICENSE.txt"
+    "static/css/2.74fc6e00.chunk.css.map": "/static/css/2.74fc6e00.chunk.css.map",
+    "static/css/main.1c74182e.chunk.css.map": "/static/css/main.1c74182e.chunk.css.map",
+    "static/js/2.5f796643.chunk.js.LICENSE.txt": "/static/js/2.5f796643.chunk.js.LICENSE.txt",
+    "static/media/CV-JoseOrtiz.267f2126.pdf": "/static/media/CV-JoseOrtiz.267f2126.pdf",
+    "static/media/double-up-arrow.2293d29e.svg": "/static/media/double-up-arrow.2293d29e.svg",
+    "static/media/myself.119e2e3f.jpg": "/static/media/myself.119e2e3f.jpg",
+    "static/media/App.scss": "/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.204ae675.js",
-    "static/js/2.e38e41ca.chunk.js",
-    "static/css/main.afd7172b.chunk.css",
-    "static/js/main.383fbce6.chunk.js"
+    "static/js/runtime-main.6e7a4551.js",
+    "static/css/2.74fc6e00.chunk.css",
+    "static/js/2.5f796643.chunk.js",
+    "static/css/main.1c74182e.chunk.css",
+    "static/js/main.aa90e42f.chunk.js"
   ]
 }
