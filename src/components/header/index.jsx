@@ -15,7 +15,7 @@ const Header = () => {
                         </NavbarBrand>
                         <Nav>
                             <ScrollLink classes="nav-link" sectionID="portfolio">Portfolio</ScrollLink>
-                            <ScrollLink classes="nav-link" sectionID="about-me">About me</ScrollLink>
+                            <ScrollLink classes="nav-link" sectionID="about-me">About</ScrollLink>
                             <ScrollLink classes="nav-link" sectionID="contact">Contact</ScrollLink>
                         </Nav>
                     </Container>

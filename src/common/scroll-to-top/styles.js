@@ -26,8 +26,8 @@ const UpButton = styled.div`
   & > i > svg {
     font-size: 14px;
     fill: white;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
   @media screen and (max-width: 768px) {
     right: 30px;

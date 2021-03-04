@@ -12,6 +12,11 @@ const SkillsWrapper = styled.section`
     i > svg {
       max-width: 100px;
     }
+    @media (max-width: 768px) {
+      i > svg {
+        max-width: 80px;
+      }
+    }
   }
   
 `;

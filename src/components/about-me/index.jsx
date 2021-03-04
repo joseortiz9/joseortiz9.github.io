@@ -9,20 +9,26 @@ import SkillsIcons from "../../data/skills.js";
 const AboutMe = () => {
     return(
         <>
-            <section id="about-me" className="section-t-space section-b-space">
+            <section id="about-me" className="section-t-space section-b-sm-space">
                 <Container>
                     <h2 className="text-center mb-5">About me</h2>
                     <Row>
-                        <Col xs={5}>
-                            <Image src={MyselfImg} fluid={true} />
+                        <Col xs={12} sm={5} className="d-flex justify-content-center">
+                            <div style={{maxWidth: "300px"}}>
+                                <Image src={MyselfImg} fluid={true} rounded={true} />
+                            </div>
                         </Col>
-                        <Col xs={7}>
+                        <Col xs={12} sm={7} className="mt-4 mt-sm-0">
                             <p>
-                                Hard-working <u>Colombian</u> software developer currently attending ITMO university in Russia, with more than 2 years of
-                                work experience. Aiming to leverage a proven knowledge of programming, full-stack web development, and
-                                software architecture skills to successfully fill the Web Developer role at your company.
-                                I'm a highperformance athlete for more than 10 years and I'm frequently praised as an adaptable, communicative,
-                                and outgoing person by my peers, I can be relied upon to help your company achieve its goals.
+                                My name is <b>Jose Ortiz</b>. I'm a Hard-working <u>Colombian</u> software developer currently attending ITMO university in Russia,
+                                with more than 2 years of experience developing systems to make peoples life easier. I love programming, solving tasks and working in teams.
+                            </p>
+                            <p>
+                                I'm a high performance water polo for more than 10 years and my friends describe me as an adaptable, communicative,
+                                and outgoing person, hope to be to your liking and we can develop something new and fancy together!
+                            </p>
+                            <p>
+                                Here you can check some of my <b>skills</b>:
                             </p>
                         </Col>
                     </Row>
