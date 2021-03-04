@@ -1,10 +1,11 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import {Card} from "react-bootstrap";
+import {checkImgPath} from "../../../../services";
 
 const ProjectCard = (props) => {
     const {img, title, shortDesc} = props;
-    const imgPath = img.substring(0, 4) === "http" ? img : require("../../../../assets/projects/"+img).default;
+    const imgPath = checkImgPath(img);
     return(
         <Tilt
             className="parallax-portfolio-effect"
@@ -15,7 +16,7 @@ const ProjectCard = (props) => {
             transitionSpeed={1500}
             onClick={props.onClick}
         >
-            <Card className="shadow">
+            <Card className="shadow border-0">
                 <Card.Img src={imgPath} alt={title} />
                 <Card.ImgOverlay className="parallax-inner-wrapper">
                     <Card.Title>{title}</Card.Title>

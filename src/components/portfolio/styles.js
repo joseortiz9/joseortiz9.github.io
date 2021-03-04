@@ -15,7 +15,7 @@ const SectionWrapper = styled.section`
       .slick-slide {
         > div {
           cursor: pointer;
-          margin: 0 10px;
+          margin: 0 20px;
         }
       }
     }
@@ -29,10 +29,11 @@ const SectionWrapper = styled.section`
         top: initial;
         padding: 0 2.5rem;
         padding-bottom: 3rem;
-        transform: translateZ(40px);
+        transform: translateZ(30px);
         .card-title {
           font-weight: bold;
           text-transform: uppercase;
+          margin-bottom: .2rem;
         }
       }
     }
@@ -58,6 +59,9 @@ const ModalWrapper = styled(Modal)`
           font-size: 2rem;
         }
       }
+    }
+    .modal-footer {
+      border: none;
     }
   }
 `;
