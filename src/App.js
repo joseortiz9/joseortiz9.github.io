@@ -11,8 +11,8 @@ function App() {
             <ScrollToTop />
             <Header />
             <LandingBanner />
-            <Portfolio />
             <AboutMe />
+            <Portfolio />
             <Contact />
             <Footer />
         </Suspense>

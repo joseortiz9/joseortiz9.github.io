@@ -33,12 +33,13 @@ const LandingBanner = () => {
                 <h1 className="banner-title">Hey! I'm Jose</h1>
                 <h1 className="banner-title-outline">Full-stack developer</h1>
                 <div className="d-flex flex-column flex-sm-row mt-5 mt-sm-3">
-                    <ScrollLink classes="btn btn-solid" sectionID="portfolio">Portfolio</ScrollLink>
-                    <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon icon={faGithub}/> Github</a>
                     <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">CV</a>
+                    <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon
+                        icon={faGithub}/> Github</a>
+                    <ScrollLink classes="btn btn-solid" sectionID="portfolio">Portfolio</ScrollLink>
                 </div>
             </Container>
-            <SocialMedia />
+            <SocialMedia/>
         </BannerWrapper>
     );
 };
