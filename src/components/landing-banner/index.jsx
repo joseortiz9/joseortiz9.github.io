@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import * as THREE from "vanta/vendor/three.r119.min";
+import * as THREE from "vanta/vendor/three.r134.min";
 import Dots from  "vanta/dist/vanta.waves.min";
 import {BannerWrapper} from "./styles";
 import vars from "../../styles/variables.module.scss";
