@@ -8,7 +8,7 @@ const ScrollToTop = () => {
             const headerHeight = window.screenY;
             setShowScroll(window.pageYOffset > headerHeight);
         },
-        [showScroll],
+        [],
     );
 
     useEffect(() => {
