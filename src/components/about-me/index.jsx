@@ -20,12 +20,14 @@ const AboutMe = () => {
                         </Col>
                         <Col xs={12} sm={7} className="mt-4 mt-sm-0">
                             <p>
-                                My name is <b>Jose Ortiz</b>. I'm a Hard-working <u>Colombian</u> software developer currently attending ITMO university in Russia,
-                                with more than 2 years of experience developing systems to make peoples life easier. I love programming, solving tasks and working in teams.
+                                I'm a Hard-working <u>Colombian</u> software engineer with over 6 years of experience in commercial development, backed by a bachelor's degree in
+                                software development from ITMO University.
                             </p>
                             <p>
-                                I'm a high performance water polo for more than 10 years and my friends describe me as an adaptable, communicative,
-                                and outgoing person, hope to be to your liking and we can develop something new and fancy together!
+                                A background of over 15 years in professional sports underscores my strong self-discipline
+                                and goal-oriented mindset. Known among colleagues for adaptability, sociability, and teamwork skills. Equipped with extensive
+                                development expertise and a commitment to ongoing enhancement, I am eager to make significant contributions as a Fullstack
+                                developer in your team. You can rely on my dedication and goal-oriented approach to deliver results.
                             </p>
                             <p>
                                 Here you can check some of my <b>skills</b>:

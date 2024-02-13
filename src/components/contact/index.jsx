@@ -1,9 +1,9 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import CVPdf from "../../assets/CV-JoseOrtiz.pdf";
 import {ReactComponent as ProgrammerImg} from "../../assets/programmer.svg";
 import SocialMedia from "../../common/social-media";
 import {ContactSectionWrapper} from "./styles";
+import {CV_LINK} from "../../data/consts";
 
 const Contact = () => {
     return(
@@ -28,7 +28,7 @@ const Contact = () => {
                                 <span />
                                 <span />
                             </div>
-                            <a className="btn btn-solid" href={CVPdf} target="_blank" rel="noreferrer">Download CV</a>
+                            <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">Download CV</a>
                         </div>
                     </Col>
                 </Row>

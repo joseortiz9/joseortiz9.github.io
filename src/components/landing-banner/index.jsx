@@ -7,8 +7,8 @@ import {Container} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import ScrollLink from "../../common/scroll-link";
-import CVPdf from "../../assets/CV-JoseOrtiz.pdf";
 import SocialMedia from "../../common/social-media";
+import {CV_LINK} from "../../data/consts";
 
 const LandingBanner = () => {
     const [vantaEffect, setVantaEffect] = useState()
@@ -35,7 +35,7 @@ const LandingBanner = () => {
                 <div className="d-flex flex-column flex-sm-row mt-5 mt-sm-3">
                     <ScrollLink classes="btn btn-solid" sectionID="portfolio">Portfolio</ScrollLink>
                     <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon icon={faGithub}/> Github</a>
-                    <a className="btn btn-solid" href={CVPdf} target="_blank" rel="noreferrer">CV</a>
+                    <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">CV</a>
                 </div>
             </Container>
             <SocialMedia />
