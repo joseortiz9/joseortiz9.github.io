@@ -22,7 +22,7 @@ const Portfolio = () => {
             <SectionWrapper id="portfolio" className="d-flex justify-content-center section-t-space position-relative">
                 <Container className="py-5">
                     <h2 className="mb-5 text-center">
-                        Portfolio <span style={{fontStyle: "italic", fontSize: "10px"}}>Soon demo of projects</span>
+                        Portfolio <span style={{fontStyle: "italic", fontSize: "10px"}}>(In progress*)</span>
                     </h2>
                     <Slider {...PortfolioSliderProps} className="portfolio-slider">
                         {
