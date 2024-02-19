@@ -7,7 +7,7 @@ const SocialMedia = () => {
     return(
         <SocialMediaWrapper className="social-container">
             <a href="https://github.com/joseortiz9" className="github"><FontAwesomeIcon icon={faGithub}/></a>
-            <a href="https://www.linkedin.com/in/jose-david-ortiz-correa-a75155208/" className="linkedin"><FontAwesomeIcon icon={faLinkedin}/></a>
+            <a href="https://www.linkedin.com/in/joseortiz09/" className="linkedin"><FontAwesomeIcon icon={faLinkedin}/></a>
             <a href="https://www.instagram.com/joseortiz09" className="instagram"><FontAwesomeIcon icon={faInstagram}/></a>
         </SocialMediaWrapper>
     );
