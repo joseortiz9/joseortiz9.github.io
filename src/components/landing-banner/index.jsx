@@ -45,7 +45,7 @@ const LandingBanner = () => {
         <BannerWrapper ref={vantaRef} id="landing-banner" className="d-flex align-items-center">
             <Container>
                 <h1 className="banner-title">Hey! I'm Jose</h1>
-                <p className="banner-title-outline">Full-stack developer</p>
+                <p className="banner-title-outline">Independent Fullstack Engineer</p>
                 <div className="d-flex flex-column flex-sm-row mt-5 mt-sm-3">
                     <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">CV</a>
                     <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon

@@ -19,14 +19,18 @@ const AboutMe = () => {
                         </Col>
                         <Col xs={12} sm={7} className="mt-4 mt-sm-0">
                             <p>
-                                I'm a Hard-working <u>Colombian</u> software engineer with over 6 years of experience in commercial development, backed by a bachelor's degree in
-                                software development from ITMO University.
+                                I'm a <u>Colombian</u> fullstack engineer based in Málaga, Spain, with a
+                                software-engineering degree from ITMO University and a bit over six years
+                                building commercial software.
                             </p>
                             <p>
-                                A background of over 15 years in professional sports underscores my strong self-discipline
-                                and goal-oriented mindset. Known among colleagues for adaptability, sociability, and teamwork skills. Equipped with extensive
-                                development expertise and a commitment to ongoing enhancement, I am eager to make significant contributions as a Fullstack
-                                developer in your team. You can rely on my dedication and goal-oriented approach to deliver results.
+                                Up to 2024 I spent a couple of years at Gaembla in Cyprus. Since then I've
+                                worked independently as an autónomo, usually across several fullstack
+                                engagements at once — web platforms, internal admin tools, deploy
+                                infrastructure, and design-system work. I pick the stack to fit the project:
+                                mostly TypeScript on Node/NestJS with React, Next, and React Native, and more
+                                recently Go with Temporal on the backend and React with TanStack on the
+                                frontend.
                             </p>
                             <p>
                                 Here you can check some of my <b>skills</b>:
