@@ -3,6 +3,13 @@ import vars from "../../styles/variables.module.scss";
 
 const ContactSectionWrapper = styled.section`
   height: 75vh;
+  // The lead sentence is a section heading (h2) for landmark/heading order,
+  // but keeps its sentence-case, non-uppercase styling instead of the global h2 look.
+  .contact-heading {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
   .social-container a {
     font-size: 30px;
   }
@@ -31,7 +38,7 @@ const ContactSectionWrapper = styled.section`
   }
   @media (max-width: 768px) {
     height: 90vh;
-    h1 {
+    .contact-heading {
       font-size: 1.8rem;
     }
   }

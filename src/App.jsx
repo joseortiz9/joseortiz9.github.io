@@ -10,10 +10,12 @@ function App() {
             <GlobalStyles />
             <ScrollToTop />
             <Header />
-            <LandingBanner />
-            <AboutMe />
-            <Portfolio />
-            <Contact />
+            <main>
+                <LandingBanner />
+                <AboutMe />
+                <Portfolio />
+                <Contact />
+            </main>
             <Footer />
         </Suspense>
 );
