@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import ScrollToTop from "./index";
 
 // Guards the React 19 refactor that inlined the scroll handler into a single
@@ -17,8 +17,10 @@ describe("ScrollToTop", () => {
 
     expect(button).toHaveClass("d-none");
 
-    window.pageYOffset = 500;
-    window.dispatchEvent(new Event("scroll"));
+    act(() => {
+      window.pageYOffset = 500;
+      window.dispatchEvent(new Event("scroll"));
+    });
 
     expect(button).toHaveClass("d-flex");
   });

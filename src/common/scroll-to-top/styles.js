@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const UpButton = styled.div`
+const UpButton = styled.button`
   box-sizing: border-box;
   display: flex;
   align-items: center;
