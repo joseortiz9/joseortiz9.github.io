@@ -1,4 +1,3 @@
-import React from "react";
 import {FooterWrapper} from "./styles";
 import {Container} from "react-bootstrap";
 import {SocialMedia} from "../../common";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ScrollLink = (props) => {
     const {classes, sectionID, children} = props;
     const handleScrollCLick = (e) => {

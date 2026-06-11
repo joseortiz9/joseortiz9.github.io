@@ -1,4 +1,3 @@
-import React from "react";
 import Sticky from "react-stickynode";
 import {Container, Nav, Navbar, NavbarBrand} from "react-bootstrap";
 import {HeaderWrapper} from "./styles";

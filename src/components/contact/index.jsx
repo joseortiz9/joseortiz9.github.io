@@ -1,4 +1,3 @@
-import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import {ReactComponent as ProgrammerImg} from "../../assets/programmer.svg";
 import SocialMedia from "../../common/social-media";
