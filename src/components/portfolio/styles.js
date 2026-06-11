@@ -53,7 +53,11 @@ const ModalWrapper = styled(Modal)`
         font-weight: bold;
         text-transform: uppercase;
       }
-      .close {
+      .modal-close-button {
+        background: none;
+        border: none;
+        margin-left: auto;
+        padding: 0;
         color: ${vars.fontDefaultColor};
         span {
           font-size: 2rem;

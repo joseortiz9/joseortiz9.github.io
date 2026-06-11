@@ -10,7 +10,7 @@ const Header = () => {
             <Sticky top={0} innerZ={1000} activeClass="sticky-nav-active">
                 <Navbar className="m-md-0" fixed="top">
                     <Container className="container-wrapper border-section border-top-0">
-                        <NavbarBrand as={ScrollLink} sectionID="landing-banner" classes="font-weight-bold navbar-brand">
+                        <NavbarBrand as={ScrollLink} sectionID="landing-banner" classes="fw-bold navbar-brand">
                             Jose Ortiz
                         </NavbarBrand>
                         <Nav>
