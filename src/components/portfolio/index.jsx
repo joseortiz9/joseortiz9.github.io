@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {ModalWrapper, SectionWrapper} from "./styles";
 import {Col, Container, Image, Modal, Row} from "react-bootstrap";
-import Slider from 'react-slick';
+import Slider from '@ant-design/react-slick';
 import {PortfolioSliderProps} from "../../styles/SliderSettings";
 import ProjectsData from "../../data/portfolio.json";
 import ProjectCard from "./common/project-card";
@@ -43,9 +43,9 @@ const Portfolio = () => {
             <ModalWrapper show={showModal} onHide={() => setShowModal(false)} size="lg" centered>
                 <Modal.Header>
                     <Modal.Title>{project.title}</Modal.Title>
-                    <button type="button" className="close" onClick={() => setShowModal(false)}>
+                    <button type="button" className="modal-close-button" onClick={() => setShowModal(false)}>
                         <span aria-hidden="true"><CloseButtonSvg /></span>
-                        <span className="sr-only">Close</span>
+                        <span className="visually-hidden">Close</span>
                     </button>
                 </Modal.Header>
                 <Modal.Body>
@@ -54,7 +54,7 @@ const Portfolio = () => {
                             <Image src={checkImgPath(project.img)} alt={project.title} fluid={true} className="rounded shadow" />
                         </Col>
                         <Col xs={12} md={7}>
-                            <p className="font-italic">"{project.shortDesc}"</p>
+                            <p className="fst-italic">"{project.shortDesc}"</p>
                             <p>{project.fullDesc}</p>
                         </Col>
                     </Row>
