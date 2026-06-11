@@ -10,17 +10,17 @@ const Contact = () => {
             <Container>
                 <Row>
                     <Col xs={12} md={8} className="mb-5 mb-md-0">
-                        <h1>
+                        <h2 className="contact-heading">
                             I’m always up for new challenges and opportunities. Feel free to say hi via <b>
                             <a href="mailto:joseortiz122799@gmail.com">joseortiz122799@gmail.com</a></b>
-                        </h1>
+                        </h2>
                         <div className="mt-3">
                             <SocialMedia />
                         </div>
                     </Col>
                     <Col xs={12} md={4}>
                         <div className="d-flex flex-column align-items-center">
-                            <div className="cv-image-container d-none d-sm-block">
+                            <div className="cv-image-container d-none d-sm-block" aria-hidden="true">
                                 <ProgrammerImg />
                                 <span />
                                 <span />

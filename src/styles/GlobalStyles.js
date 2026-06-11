@@ -41,13 +41,23 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  h1.banner-title, h1.banner-title-outline {
+  // Visible keyboard-only focus indicator (WCAG 2.4.7) without affecting
+  // mouse/touch interactions.
+  a:focus-visible,
+  button:focus-visible,
+  .btn-solid:focus-visible {
+    outline: 2px solid ${vars.fontDefaultColor};
+    outline-offset: 3px;
+  }
+
+  .banner-title, .banner-title-outline {
     font-family: 'Poppins', sans-serif, Arial, Helvetica;
     font-weight: 700;
     font-size: 80px;
     word-break: break-word;
+    margin-bottom: 0.5rem;
   }
-  h1.banner-title {
+  .banner-title {
     color: ${vars.fontDefaultColor};
     @media (max-width: 991px) {
       font-size: 70px;
@@ -59,7 +69,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 50px;
     }
   }
-  h1.banner-title-outline {
+  .banner-title-outline {
     font-size: 70px;
     color: ${vars.fontDefaultColor};
     -webkit-text-fill-color: transparent;

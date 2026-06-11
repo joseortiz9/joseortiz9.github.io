@@ -14,6 +14,11 @@ const LandingBanner = () => {
     const vantaRef = useRef(null)
     const vantaEffect = useRef(null)
     useEffect(() => {
+        // Respect users who prefer reduced motion: skip the animated waves
+        // background (WCAG 2.3.3) and fall back to the static theme color.
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) return;
+
         vantaEffect.current = Dots({
             el: vantaRef.current,
             THREE: THREE,
@@ -29,7 +34,7 @@ const LandingBanner = () => {
         <BannerWrapper ref={vantaRef} id="landing-banner" className="d-flex align-items-center">
             <Container>
                 <h1 className="banner-title">Hey! I'm Jose</h1>
-                <h1 className="banner-title-outline">Full-stack developer</h1>
+                <p className="banner-title-outline">Full-stack developer</p>
                 <div className="d-flex flex-column flex-sm-row mt-5 mt-sm-3">
                     <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">CV</a>
                     <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon

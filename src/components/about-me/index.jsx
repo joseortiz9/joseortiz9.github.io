@@ -14,7 +14,7 @@ const AboutMe = () => {
                     <Row>
                         <Col xs={12} sm={5} className="d-flex justify-content-center">
                             <div style={{maxWidth: "300px"}}>
-                                <Image src={MyselfImg} fluid={true} rounded={true} />
+                                <Image src={MyselfImg} alt="Portrait of Jose Ortiz" fluid={true} rounded={true} />
                             </div>
                         </Col>
                         <Col xs={12} sm={7} className="mt-4 mt-sm-0">
@@ -39,7 +39,7 @@ const AboutMe = () => {
                 <Container fluid={true} className="py-4">
                     <Slider {...SkillsSliderProps} className="skills-slider">
                         {
-                            SkillsIcons.map((v, index) => <i key={index} dangerouslySetInnerHTML={{ __html: v.icon }} />)
+                            SkillsIcons.map((v, index) => <i key={index} aria-hidden="true" dangerouslySetInnerHTML={{ __html: v.icon }} />)
                         }
                     </Slider>
                 </Container>
