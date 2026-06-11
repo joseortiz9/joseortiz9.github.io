@@ -19,7 +19,12 @@ const ScrollToTop = () => {
     };
 
     return (
-        <UpButton onClick={scrollTop} className={"d-" + (showScroll ? "flex" : "none")}>
+        <UpButton
+            type="button"
+            aria-label="Scroll to top"
+            onClick={scrollTop}
+            className={"d-" + (showScroll ? "flex" : "none")}
+        >
             <i><DoubleArrowUp /></i>
         </UpButton>
     );
