@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import * as THREE from "vanta/vendor/three.r134.min";
 import Dots from  "vanta/dist/vanta.waves.min";
 import {BannerWrapper} from "./styles";
@@ -11,21 +11,19 @@ import SocialMedia from "../../common/social-media";
 import {CV_LINK} from "../../data/consts";
 
 const LandingBanner = () => {
-    const [vantaEffect, setVantaEffect] = useState()
     const vantaRef = useRef(null)
+    const vantaEffect = useRef(null)
     useEffect(() => {
-        if (!vantaEffect) {
-            setVantaEffect(Dots({
-                el: vantaRef.current,
-                THREE: THREE,
-                color: vars.themeWavesDark,
-                zoom: 0.6,
-            }))
-        }
+        vantaEffect.current = Dots({
+            el: vantaRef.current,
+            THREE: THREE,
+            color: vars.themeWavesDark,
+            zoom: 0.6,
+        })
         return () => {
-            if (vantaEffect) vantaEffect.destroy()
+            if (vantaEffect.current) vantaEffect.current.destroy()
         };
-    }, [vantaEffect]);
+    }, []);
 
     return(
         <BannerWrapper ref={vantaRef} id="landing-banner" className="d-flex align-items-center">

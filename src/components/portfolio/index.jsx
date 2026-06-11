@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import {ModalWrapper, SectionWrapper} from "./styles";
 import {Col, Container, Image, Modal, Row} from "react-bootstrap";
 import Slider from '@ant-design/react-slick';
