@@ -18,13 +18,24 @@ const LandingBanner = () => {
         // background (WCAG 2.3.3) and fall back to the static theme color.
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (prefersReducedMotion) return;
+        if (!vantaRef.current) return;
 
-        vantaEffect.current = Dots({
-            el: vantaRef.current,
-            THREE: THREE,
-            color: vars.themeWavesDark,
-            zoom: 0.6,
-        })
+        const canvas = document.createElement("canvas");
+        const supportsWebGL = Boolean(
+            canvas.getContext("webgl") || canvas.getContext("experimental-webgl")
+        );
+        if (!supportsWebGL) return;
+
+        try {
+            vantaEffect.current = Dots({
+                el: vantaRef.current,
+                THREE: THREE,
+                color: vars.themeWavesDark,
+                zoom: 0.6,
+            })
+        } catch {
+            vantaEffect.current = null;
+        }
         return () => {
             if (vantaEffect.current) vantaEffect.current.destroy()
         };
