@@ -3,18 +3,21 @@ import {ReactComponent as ProgrammerImg} from "../../assets/programmer.svg";
 import SocialMedia from "../../common/social-media";
 import {ContactSectionWrapper} from "./styles";
 import {CV_LINK} from "../../data/consts";
+import {useReveal} from "../../common/hooks";
 
 const Contact = () => {
-    return(
+    const reveal = useReveal();
+    return (
         <ContactSectionWrapper id="contact" className="d-flex align-items-center text-break">
             <Container>
-                <Row>
+                <Row ref={reveal} className="reveal align-items-center">
                     <Col xs={12} md={8} className="mb-5 mb-md-0">
+                        <span className="kicker">Contact</span>
                         <h2 className="contact-heading">
-                            I’m always up for new challenges and opportunities. Feel free to say hi via <b>
-                            <a href="mailto:joseortiz122799@gmail.com">joseortiz122799@gmail.com</a></b>
+                            Building something ambitious — or want AI woven into it the right way?
+                            Say hi at <b><a href="mailto:joseortiz122799@gmail.com">joseortiz122799@gmail.com</a></b>
                         </h2>
-                        <div className="mt-3">
+                        <div className="mt-4">
                             <SocialMedia />
                         </div>
                     </Col>
