@@ -1,22 +1,36 @@
 import styled from 'styled-components';
-import vars from "../../styles/variables.module.scss";
 
 const ContactSectionWrapper = styled.section`
-  height: 75vh;
+  min-height: 75vh;
+  padding-block: 80px;
+  .kicker { margin-bottom: 1.2rem; }
   // The lead sentence is a section heading (h2) for landmark/heading order,
-  // but keeps its sentence-case, non-uppercase styling instead of the global h2 look.
+  // but keeps its sentence-case, larger styling instead of the global look.
   .contact-heading {
     text-transform: none;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    line-height: 1.25;
+    a {
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
   }
   .social-container a {
-    font-size: 30px;
+    font-size: 28px;
+    margin-right: 1rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    &:hover { transform: translateY(-3px); }
   }
   .cv-image-container {
-    background-color: #393939; //{vars.themeWaves};
+    background-color: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
     margin-bottom: 2rem;
-    padding: 20px 20px;
+    padding: 22px;
     svg {
       width: 100px;
       height: 100px;
@@ -28,19 +42,17 @@ const ContactSectionWrapper = styled.section`
       height: 1px;
       margin: 4px 0;
       float: left;
-      background-color: ${vars.fontDefaultColor};
+      background-color: var(--paper-muted);
       transition: all 0.3s ease;
       &:last-child {
         width: calc(100% - 50px);
         margin-bottom: 0;
       }
     }
+    &:hover > span { background-color: var(--accent); }
   }
   @media (max-width: 768px) {
-    height: 90vh;
-    .contact-heading {
-      font-size: 1.8rem;
-    }
+    min-height: 90vh;
   }
 `;
 

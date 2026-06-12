@@ -1,6 +1,6 @@
 {
   "short_name": "Jose Ortiz",
-  "name": "Jose Ortiz | Software Engineer",
+  "name": "Jose Ortiz — Senior Software Engineer & AI Consultant",
   "icons": [
     {
       "src": "favicon.svg",
@@ -11,6 +11,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0d0d0f",
-  "background_color": "#ffffff"
+  "theme_color": "#0b0b10",
+  "background_color": "#0b0b10"
 }

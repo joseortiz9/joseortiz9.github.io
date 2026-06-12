@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {ModalWrapper, SectionWrapper} from "./styles";
+import {useReveal} from "../../common/hooks";
 import {Col, Container, Image, Modal, Row} from "react-bootstrap";
 import Slider from '@ant-design/react-slick';
 import {PortfolioSliderProps} from "../../styles/SliderSettings";
@@ -13,6 +14,7 @@ import {checkImgPath} from "../../services";
 const Portfolio = () => {
     const [showModal, setShowModal] = useState(false);
     const [project, setProject] = useState({"title":"","shortDesc":"","fullDesc":"","img":"https://via.placeholder.com/300x500","intro":"","site":"","repository":""});
+    const reveal = useReveal();
     const handleCardClick = (p) => {
         setProject(p);
         setShowModal(true);
@@ -21,9 +23,10 @@ const Portfolio = () => {
         <>
             <SectionWrapper id="portfolio" className="d-flex justify-content-center section-t-space position-relative">
                 <Container className="py-5">
-                    <h2 className="mb-5 text-center">
-                        Portfolio <span style={{fontStyle: "italic", fontSize: "10px"}}>(In progress*)</span>
-                    </h2>
+                    <div ref={reveal} className="reveal text-center section-head">
+                        <span className="kicker">Selected work</span>
+                        <h2 className="mb-3">Shipped, in production</h2>
+                    </div>
                     <Slider {...PortfolioSliderProps} className="portfolio-slider">
                         {
                             ProjectsData.map((project, index) =>

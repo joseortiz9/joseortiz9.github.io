@@ -6,8 +6,14 @@ const SectionWrapper = styled.section`
   color: ${vars.themeWavesDark};
   overflow: hidden;
   .container {
-    border-radius: 10px;
+    border-radius: 22px;
     background-color: ${vars.fontDefaultColor};
+    box-shadow: 0 30px 80px -40px rgba(124, 92, 255, 0.5);
+  }
+  .section-head {
+    margin-bottom: 2.5rem;
+    .kicker { color: #6c6878; justify-content: center; }
+    h2 { color: ${vars.inkBase}; }
   }
   .portfolio-slider {
     .slick-list {

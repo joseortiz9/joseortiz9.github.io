@@ -1,59 +1,47 @@
-import {useEffect, useRef} from "react";
-import * as THREE from "vanta/vendor/three.r134.min";
-import Dots from  "vanta/dist/vanta.waves.min";
-import {BannerWrapper} from "./styles";
-import vars from "../../styles/variables.module.scss";
 import {Container} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {BannerWrapper} from "./styles";
+import HeroScene from "./hero-scene";
 import ScrollLink from "../../common/scroll-link";
 import SocialMedia from "../../common/social-media";
 import {CV_LINK} from "../../data/consts";
 
+// Hero reframed around the two-line positioning Jose now leads with:
+// Senior Software Engineer and independent AI Consultant. The WebGL lattice
+// sits behind the copy; on no-WebGL / reduced-motion it degrades to a static
+// gradient orb, so the headline is always legible.
 const LandingBanner = () => {
-    const vantaRef = useRef(null)
-    const vantaEffect = useRef(null)
-    useEffect(() => {
-        // Respect users who prefer reduced motion: skip the animated waves
-        // background (WCAG 2.3.3) and fall back to the static theme color.
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (prefersReducedMotion) return;
-        if (!vantaRef.current) return;
-
-        const canvas = document.createElement("canvas");
-        const supportsWebGL = Boolean(
-            canvas.getContext("webgl") || canvas.getContext("experimental-webgl")
-        );
-        if (!supportsWebGL) return;
-
-        try {
-            vantaEffect.current = Dots({
-                el: vantaRef.current,
-                THREE: THREE,
-                color: vars.themeWavesDark,
-                zoom: 0.6,
-            })
-        } catch {
-            vantaEffect.current = null;
-        }
-        return () => {
-            if (vantaEffect.current) vantaEffect.current.destroy()
-        };
-    }, []);
-
-    return(
-        <BannerWrapper ref={vantaRef} id="landing-banner" className="d-flex align-items-center">
-            <Container>
-                <h1 className="banner-title">Hey! I'm Jose</h1>
-                <p className="banner-title-outline">Independent Fullstack Engineer</p>
-                <div className="d-flex flex-column flex-sm-row mt-5 mt-sm-3">
-                    <a className="btn btn-solid" href={CV_LINK} target="_blank" rel="noreferrer">CV</a>
-                    <a className="btn btn-solid" href="https://github.com/joseortiz9" rel="noreferrer"><FontAwesomeIcon
-                        icon={faGithub}/> Github</a>
-                    <ScrollLink classes="btn btn-solid" sectionID="portfolio">Portfolio</ScrollLink>
+    return (
+        <BannerWrapper id="landing-banner" className="d-flex align-items-center">
+            <HeroScene />
+            <Container className="hero-content">
+                <span className="kicker">Independent · Málaga, ES</span>
+                <h1 className="banner-title">Jose Ortiz</h1>
+                <p className="banner-title-outline">
+                    Senior Software Engineer<br />
+                    <span className="gradient-text">&amp; AI Consultant</span>
+                </p>
+                <p className="hero-lede">
+                    I design and ship production software — and build the autonomous agent
+                    systems, multi-agent pipelines and MCP tooling that run on top of it.
+                </p>
+                <div className="hero-actions d-flex flex-column flex-sm-row">
+                    <ScrollLink classes="btn btn-solid" sectionID="agent-systems">
+                        Explore the agent work
+                    </ScrollLink>
+                    <a className="btn btn-solid btn-ghost" href="https://github.com/joseortiz9" rel="noreferrer">
+                        <FontAwesomeIcon icon={faGithub} /> GitHub
+                    </a>
+                    <a className="btn btn-solid btn-ghost" href={CV_LINK} target="_blank" rel="noreferrer">
+                        CV
+                    </a>
                 </div>
             </Container>
-            <SocialMedia/>
+            <SocialMedia />
+            <ScrollLink classes="hero-scroll-cue" sectionID="agent-systems">
+                <span>Scroll</span>
+            </ScrollLink>
         </BannerWrapper>
     );
 };

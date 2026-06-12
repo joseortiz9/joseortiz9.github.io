@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/App.scss";
 import {GlobalStyles} from "./styles/GlobalStyles";
-import {Header, Footer, Portfolio, LandingBanner, AboutMe, Contact} from "./components";
+import {Header, Footer, Portfolio, LandingBanner, AgentSystems, AboutMe, Contact} from "./components";
 import {ScrollToTop, LoadingSpinner} from "./common";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <Header />
             <main>
                 <LandingBanner />
+                <AgentSystems />
                 <AboutMe />
                 <Portfolio />
                 <Contact />
