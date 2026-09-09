@@ -1,7 +1,8 @@
+> Browser validation policy: Use Codex/Claude native computer or browser use first. Playwright is the only fallback when native tools are unavailable or cannot perform the check.
+
 # Capturing the real-browser artifacts
 
-Run these once dependencies are installed and a browser is reachable (e.g. in
-aoforge's ui-validator / Chrome DevTools MCP gate). They are deterministic and
+Run these once dependencies are installed and native browser tools are reachable. They are deterministic and
 re-runnable; nothing here is committed automatically.
 
 ## 1. Serve the production build
@@ -20,10 +21,9 @@ folder:
 - Desktop: 1440×900 → `iteration-N/homepage-desktop.png`
 - Mobile: 390×844 (iPhone 12/13) → `iteration-N/homepage-mobile.png`
 
-Via Chrome DevTools MCP: open `http://localhost:4173/`, set the viewport, wait
-for the landing banner to settle, then capture a full-page screenshot. With
-Puppeteer the equivalent is `page.setViewport(...)` + `page.screenshot({ path,
-fullPage: true })`.
+Via native browser tools: open `http://localhost:4173/`, set the viewport, wait
+for the landing banner to settle, then capture a full-page screenshot. If native tools cannot perform the check, use Playwright through the shared
+`playwright-browser` skill to set the viewport and capture the screenshot.
 
 ## 3. Accessibility report (axe)
 
@@ -31,9 +31,8 @@ Run axe-core against the served homepage and save the JSON:
 
 - `iteration-N/axe-report.json`
 
-Via Chrome DevTools MCP run an accessibility/axe audit on the page; with
-Puppeteer use `@axe-core/puppeteer` (`new AxePuppeteer(page).analyze()`) and
-write the result. The pass criterion is **zero `critical` and zero `serious`
+Run axe-core through native browser tools if supported; otherwise use the
+Playwright fallback to run the audit and write its result. The pass criterion is **zero `critical` and zero `serious`
 violations** on the homepage.
 
 ## 4. Iteration mapping

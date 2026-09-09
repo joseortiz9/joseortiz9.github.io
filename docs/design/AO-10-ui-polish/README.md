@@ -1,3 +1,5 @@
+> Browser validation policy: Use Codex/Claude native computer or browser use first. Playwright is the only fallback when native tools are unavailable or cannot perform the check.
+
 # AO-10 — UI polish loop (design-optimizer ↔ real browser)
 
 > Before/after record for the homepage UI-polish loop. Two `design-optimizer`
@@ -6,7 +8,7 @@
 > reviewable code changes; the loop converges on an **accessibility** axis so
 > "polished" is measurable rather than purely a matter of taste.
 >
-> Linear: [AO-10](https://linear.app/ao-rin-personal/issue/AO-10/ui-polish-loop-design-optimizer-agent-puppeteer-chrome-devtools-mcp-2)
+> Linear: [AO-10](https://linear.app/ao-rin-personal/issue/AO-10)
 
 ## TL;DR
 
